@@ -100,9 +100,9 @@ spec:
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          command: 
+          command:
             - n8n
-          args: 
+          args:
             - worker
           ports:
             - name: healthz
